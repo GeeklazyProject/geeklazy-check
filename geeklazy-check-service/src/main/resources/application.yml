@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+database:
+  url: jdbc:mysql://mysql:3306/geeklazy_check?useUnicode=true&characterEncoding=utf-8
+  username: root
+  password: 123456
+
+spring:
+  jpa:
+    show-sql: true
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: ${database.url}
+    username: ${database.username}
+    password: ${database.password}
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: ${database.url}
+      username: ${database.username}
+      password: ${database.password}
+  flyway:
+    # flyway 的 clean 命令会删除指定 schema 下的所有 table，应该禁用
+    clean-disabled: true
+    # 启用flyway
+    enabled: true
+    # 设定 flyway 的 metadata 表名，缺省值：flyway_schema_history
+    table: flyway_schema_history
+    out-of-order: false
+    encoding: UTF-8
+logging:
+  level:
+    com: DEBUG
