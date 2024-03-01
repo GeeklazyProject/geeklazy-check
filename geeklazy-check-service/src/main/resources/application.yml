@@ -2,7 +2,7 @@ server:
   port: 8080
 
 database:
-  url: jdbc:mysql://mysql:3306/geeklazy_check?useUnicode=true&characterEncoding=utf-8
+  url: jdbc:mysql://${database.host}:${database.port}/${database.schema}?useUnicode=true&characterEncoding=utf-8
   username: root
   password: 123456
 
