@@ -12,4 +12,4 @@ ENV SPECTRUM_SECRET=""
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "geeklazy-check.jar", "application.yml", "--Dspectrum.config.address=${SPECTRUM_ADDRESS}", "--Dspectrum.key=$SPECTRUM_KEY", "--Dspectrum.secret=${SPECTRUM_SECRET}", "--DENVIRONMENT=geeklazy", "--DSERVICE_NAME=geeklazy-check", "--DAPP_VERSION=v1"]
+CMD ["java", "-jar", "geeklazy-check.jar", "application.yml", "--Dsystem.config.address=${SPECTRUM_ADDRESS}", "--Dspectrum.key=$SPECTRUM_KEY", "--Dspectrum.secret=${SPECTRUM_SECRET}", "--DENVIRONMENT=geeklazy", "--DSERVICE_NAME=geeklazy-check", "--DAPP_VERSION=v1"]
