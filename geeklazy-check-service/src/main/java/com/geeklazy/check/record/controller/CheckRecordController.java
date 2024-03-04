@@ -25,7 +25,7 @@ import java.util.Optional;
  */
 @Slf4j
 @RestController
-@RequestMapping("/check/record")
+@RequestMapping("/web/check/record")
 public class CheckRecordController implements CheckRecordApi {
 
     @Autowired
